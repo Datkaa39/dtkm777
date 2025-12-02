@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    resize: none;
+    color: white;
+}
+
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+.ckp {
+    padding: 40px;
+    color: white;
+    padding-left: 65px;
+}
+
+nav, ul, li {
+    display: flex;
+    justify-content: end;
+    gap: 60px;
+    color: white;
+    font-size: 20px;
+    padding-right: 40px;
+    margin-top: -20px;
+    font-size: 20px;
+}
+
+.bio-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    gap: 50px;
+}
+
+.bio-text {
+    padding-left: 50px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.bio-text h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.bio-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-image img {
+    width: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.clients-section {
+    /* background-color: #000000; */
+    /* color: #ffffff; */
+    padding: 100px 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.clients-section h2 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.description {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 80px;
+    opacity: 0.8;
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    color: white;
+}
+footer, h4{
+    padding-left: 20px;
+    padding-top: 300px;
+    font-size: 15px;
+}
+
+
+.lineburger{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+}
+#chek{
+    display: none;
+}
+#chek:checked ~ nav{
+    display: flex;
+   
+}
+#chek:checked + label .burger .lineburger:nth-child(2){
+    display: none;
+}
+#chek:checked + label .burger .lineburger:nth-child(1){
+    transform: rotate(45deg) translate(7px);
+    transition: 0.5s;
+}
+#chek:checked + label .burger .lineburger:nth-child(3){
+      transform: rotate(-45deg) translate(5px);
+      transition: 0.5s;
+}
+#chek:checked ~ nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+   
+   
+}
+
+#chek:checked ~ nav{
+     position: absolute;
+    top: 50px;
+    right: 20px;
+    /* background-color: aliceblue; */
+    width: 300px;
+    z-index: 5;
+    display: flex;
+    gap: 20px;
+
+}
+@media screen and (max-width: 750px){
+    nav{
+        display: none;
+    }
+    .burger{
+        display: flex;
+    }
+}
+
+/* .logos img {
+    filter: invert(100%);
+    opacity: .8;
+    transition: 0.3s;
+} */
+
+.logos img:hover {
+    opacity: 1;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .clients-section h2 {
+        font-size: 45px;
+    }
+    .logos {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .clients-section h2 {
+        font-size: 35px;
+    }
+    .description {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .bio-section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .bio-text, .bio-image {
+        width: 100%;
+    }
+
+    .bio-text h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .bio-text p {
+        text-align: center;
+    }
+
+    .bio-image {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .bio-text h1 {
+        font-size: 40px;
+    }
+
+    .bio-text p {
+        font-size: 15px;
+    }
+}
