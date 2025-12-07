@@ -99,4 +99,8 @@ footer, h4{
     .burger{
         display: flex;
     }
+    nav ul {
+    gap: 35px;
+    padding-right: 20px;
+  }
 }
